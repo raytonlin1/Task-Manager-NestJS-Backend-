@@ -10,3 +10,6 @@ docker run --name postgres-nest -p 5432:5432 -e POSTGRES_PASSWORD=postgres -d po
 docker container ls
 docker container stop postgres-nest
 docker container rm postgres-nest 
+nest g module auth
+nest g controller auth --no-spec
+nest g service auth --no-spec
