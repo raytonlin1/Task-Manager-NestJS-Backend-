@@ -6,3 +6,7 @@ yarn start:dev
 nest g module tasks
 nest g controller tasks --no-spec
 nest g service tasks --no-spec
+docker run --name postgres-nest -p 5432:5432 -e POSTGRES_PASSWORD=postgres -d postgres
+docker container ls
+docker container stop postgres-nest
+docker container rm postgres-nest 

@@ -32,7 +32,7 @@ npm start
 
 ## Meta
 
-Rayton Lin – [@MyTwitter](https://twitter.com/dbader_org) – raytonlin@gmail.com
+Rayton Lin – [@uwaterloo](https://twitter.com/uwaterloo) – raytonlin@gmail.com
 
 Distributed under the MIT license. See ``LICENSE`` for more information.
 
