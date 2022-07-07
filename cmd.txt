@@ -13,3 +13,5 @@ docker container rm postgres-nest
 nest g module auth
 nest g controller auth --no-spec
 nest g service auth --no-spec
+npm i @nestjs/jwt @nestjs/passport passport passport-jwt
+npm i @types/passport-jwt
