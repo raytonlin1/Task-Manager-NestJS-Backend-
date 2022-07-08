@@ -1,4 +1,5 @@
 import { Controller, Get, Post, Put, Delete, Body, Param, Patch, Query, UseGuards, Logger } from '@nestjs/common';
+import { ConfigService } from '@nestjs/config';
 import { AuthGuard } from '@nestjs/passport';
 import { GetUser } from 'src/auth/get-user.decorator';
 import { User } from 'src/auth/user.entity';
@@ -12,7 +13,11 @@ import { TasksService } from './tasks.service';
 @UseGuards(AuthGuard())
 export class TasksController {
   private logger = new Logger('TasksController');
-  constructor(private tasksService: TasksService) {}
+  constructor(
+    private tasksService: TasksService,
+  ) {
+
+  }
 
   @Get()
   getTasks(

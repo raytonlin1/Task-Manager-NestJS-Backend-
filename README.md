@@ -22,6 +22,9 @@ npm start
 ```
 
 ## Release History
+* 0.1.1
+    * CHANGE: Made logs more descriptive
+    * ADD: Added communication to a front-end
 * 0.1.0
     * The first proper release
     * CHANGE: Update docs (module code remains unchanged)
