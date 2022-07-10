@@ -19,3 +19,17 @@ npm install -g cross-env
 npm i @nestjs/config
 npm i @hapi/joi 
 npm i -D @types/hapi__joi
+npm i heroku -g
+heroku login
+heroku addons:create heroku-postgresql:hobby-dev -a task-management-raytonlin1
+heroku git:remote -a task-management-raytonlin1
+heroku config:set NPM_CONFIG_PRODUCTION=false
+heroku config:set NODE_ENV=production
+heroku config:set STAGE=prod
+heroku config:set DB_HOST=ec2-52-20-166-21.compute-1.amazonaws.com
+heroku config:set DB_PORT=5432
+heroku config:set DB_USERNAME=rrdefswalbodzk
+heroku config:set DB_PASSWORD=e04124b11a0d6e5b5eb7589ab42ae234047579d9243711e603026ee2671cdd03
+heroku config:set DB_DATABASE=dfvvstbsckqvef
+heroku config:set JWT_SECRET=5bOKyNgGcix8L9qKBu6Ov12LsG0c6KXuKuZhgq1pS90xPsDjy29HBpT4QWfpXDyY
+git push -f heroku HEAD:master
