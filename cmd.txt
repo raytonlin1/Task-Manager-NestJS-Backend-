@@ -1,8 +1,8 @@
 npm i -g @nestjs/cli
 nest new project-name
-yarn add uuid
-yarn add class-validator class-transformer
-yarn start:dev
+npm i class-validator class-transformer
+npm run start:dev
+npm run test --watch
 nest g module tasks
 nest g controller tasks --no-spec
 nest g service tasks --no-spec
@@ -32,4 +32,5 @@ heroku config:set DB_USERNAME=rrdefswalbodzk
 heroku config:set DB_PASSWORD=e04124b11a0d6e5b5eb7589ab42ae234047579d9243711e603026ee2671cdd03
 heroku config:set DB_DATABASE=dfvvstbsckqvef
 heroku config:set JWT_SECRET=5bOKyNgGcix8L9qKBu6Ov12LsG0c6KXuKuZhgq1pS90xPsDjy29HBpT4QWfpXDyY
+git rm --cached .env.stage.dev
 git push -f heroku HEAD:master
