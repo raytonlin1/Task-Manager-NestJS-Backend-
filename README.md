@@ -1,6 +1,6 @@
 # Task Manager
 > This task manager allows users to log in and create, update and delete
-tasks that they want to remember.
+tasks that they want to remember. There is also a unique search feature for users to search and filter tasks, something that other task managers don't do.
 
 [![NPM Version][npm-image]][npm-url]
 [![Build Status][travis-image]][travis-url]
@@ -56,3 +56,43 @@ Distributed under the MIT license. See ``LICENSE`` for more information.
 [travis-image]: https://img.shields.io/travis/dbader/node-datadog-metrics/master.svg?style=flat-square
 [travis-url]: https://travis-ci.org/dbader/node-datadog-metrics
 [wiki]: https://github.com/yourname/yourproject/wiki
+
+### Tech Stack
+This Project uses uses Server Side Capabilities of Nodejs and Spring Boot.       
+Reasons To Use ->    
+1) Java for All Kinds of Upload and Conversion Of videos to Different Resolution Process as this process is CPU intensive.So,it's better to handle it in Java.
+2) Nodejs for Playback , Authentication-Authorization as these are just some simple I/O operations which NodeJs is pretty good at.
+
+
+### Updates :
+- Added Redis Support For Verifying JWT's origin ( By Storing IP of the logged in user in redis cache memory and matching it up during subsequent Requests)
+
+
+### Backend Architecture / System's Design
+
+### End Points
+| End Point      |   Port Number | HTTP Method   |           Description                   |  Required User registration |
+| :---            | :----:  |    :----:     |          :----:                           | ---:   |
+| /auth/signup    | 3000 | POST          | To sign up a new user                        |  No |
+| /auth/signin    | 3000 | POST          | To sign in an existing user                        |  No |
+| /tasks    | 3000 | GET          | Get all tasks made by the signed in user based on search filters.                       |  Yes |
+| /tasks/get/:id    | 3000 | GET          | Get the task with the given id.                      |  Yes |
+| /tasks/delete/:id    | 3000 | DELETE          | Delete the task with the given id.                      |  Yes |
+| /tasks/update/:id/status    | 3000 | PATCH          | Update the task with the given id with a new status given the body parameters.                      |  Yes |
+| /tasks/create    | 3000 | POST          | Create a new task, given the body parameters.                    |  Yes |
+
+### Different Models 
+
+###### - User Model 
+id: string; (unique)
+username: string; (unique)
+password: string;
+tasks: Task[]; (One to many with users)
+
+###### - Task Model   
+id: string; (unique)
+title: string; 
+description: string;
+status: TaskStatus; (TasksStatus can be Open, In Progress, or Done)
+user: User; (Many to one with tasks)
+ 
