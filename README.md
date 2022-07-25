@@ -84,15 +84,22 @@ Reasons To Use ->
 ### Different Models 
 
 ###### - User Model 
-id: string; (unique)
+id: string; (unique) 
+
 username: string; (unique)
+
 password: string;
+
 tasks: Task[]; (One to many with users)
 
 ###### - Task Model   
 id: string; (unique)
+
 title: string; 
+
 description: string;
+
 status: TaskStatus; (TasksStatus can be Open, In Progress, or Done)
+
 user: User; (Many to one with tasks)
  
