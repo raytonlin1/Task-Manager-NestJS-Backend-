@@ -58,14 +58,12 @@ Distributed under the MIT license. See ``LICENSE`` for more information.
 [wiki]: https://github.com/yourname/yourproject/wiki
 
 ### Tech Stack
-This Project uses uses Server Side Capabilities of Nodejs and Spring Boot.       
-Reasons To Use ->    
-1) Java for All Kinds of Upload and Conversion Of videos to Different Resolution Process as this process is CPU intensive.So,it's better to handle it in Java.
-2) Nodejs for Playback , Authentication-Authorization as these are just some simple I/O operations which NodeJs is pretty good at.
+This Project uses uses Server Side Capabilities of NodeJS.       
+
 
 
 ### Updates :
-- Added Redis Support For Verifying JWT's origin ( By Storing IP of the logged in user in redis cache memory and matching it up during subsequent Requests)
+- Added SSO with NestJS
 
 
 ### Backend Architecture / System's Design
