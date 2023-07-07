@@ -22,6 +22,8 @@ npm start
 ```
 
 ## Release History
+* 0.1.2
+    * CHANGE: Back-end will be offline indefinitely due to removal of Heroku's free tier.
 * 0.1.1
     * CHANGE: Made logs more descriptive
     * ADD: Added communication to a front-end
